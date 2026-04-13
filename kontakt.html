@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt | Webrise Studio</title>
+  <meta name="description" content="Kostenlose Beratung anfordern. Wir bauen Ihre neue Firmenwebsite.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-alt">
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">Webrise <span>Studio</span></a>
+      <button class="hamburger">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links">
+        <a href="index.html">Startseite</a>
+        <a href="pakete.html">Pakete & Extras</a>
+        <a href="ueber-mich.html">Über mich</a>
+        <a href="referenzen.html">Referenzen</a>
+        <a href="kontakt.html" class="btn btn-primary" style="background-color: var(--primary-dark)">Kontakt</a>
+      </div>
+    </div>
+  </nav>
+
+  <main style="padding-top: 100px;">
+    <section class="section">
+      <div class="container reveal">
+        <div class="text-center mb-4">
+          <h1>Kontaktieren Sie uns</h1>
+          <p>Wir melden uns innerhalb von 24 Stunden bei Ihnen.<br>Sie können uns auch direkt eine E-Mail schreiben an: <strong>info@webrisestudio.de</strong></p>
+        </div>
+
+        <div class="form-card">
+          <!-- Formspree Integration Placeholder -->
+          <form action="https://formspree.io/f/DEINE_FORMSPREE_ID_HIER" method="POST">
+            
+            <div class="form-group">
+              <label for="name" class="form-label">Ihr Name / Firmenname</label>
+              <input type="text" id="name" name="name" class="form-control" required placeholder="Geben Sie Ihren Namen ein">
+            </div>
+
+            <div class="grid" style="gap: 1.5rem; margin-bottom: 0;">
+              <div class="form-group">
+                <label for="email" class="form-label">E-Mail Adresse</label>
+                <input type="email" id="email" name="email" class="form-control" required placeholder="ihre@email.de">
+              </div>
+              
+              <div class="form-group">
+                <label for="phone" class="form-label">Telefonnummer</label>
+                <input type="tel" id="phone" name="phone" class="form-control" required placeholder="0123 456789">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="package" class="form-label">Welches Paket interessiert Sie?</label>
+              <select id="package" name="package" class="form-control" required>
+                <option value="" disabled selected>Bitte wählen...</option>
+                <option value="Starter">Starter - 2.799€</option>
+                <option value="Professional">Professional - 3.299€</option>
+                <option value="Premium">Premium - 3.899€</option>
+                <option value="Unsicher">Ich bin noch unsicher</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="extras" class="form-label">Möchten Sie Extras dazubuchen?</label>
+              <select id="extras" name="extras" class="form-control">
+                <option value="Keine" selected>Nein / Noch nicht sicher</option>
+                <option value="Google Maps">Google Maps Optimierung - 499€</option>
+                <option value="Wartungsvertrag">Wartungsvertrag - 79€/Monat</option>
+                <option value="SEO">SEO-Grundpaket - 599€</option>
+                <option value="Logo">Logo-Auffrischung - 349€</option>
+                <option value="WhatsApp">WhatsApp-Kontaktbutton - 99€</option>
+                <option value="Statistik">Besucher-Statistik einrichten - 149€</option>
+                <option value="Mehrere">Mehrere Extras (bitte in Nachricht erwähnen)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message" class="form-label">Ihre Nachricht</label>
+              <textarea id="message" name="message" class="form-control" placeholder="Beschreiben Sie kurz Ihr Projekt..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block" style="font-size: 1.125rem; padding: 1rem;">Jetzt Anfrage absenden</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer style="background: var(--bg-main); color: var(--text-main); border-top: 1px solid var(--border-color);">
+    <div class="container">
+      <div class="footer-content" style="margin-bottom: 2rem;">
+        <div class="footer-brand">
+          <h3 style="color: var(--text-main);">Webrise Studio</h3>
+          <p style="color: var(--text-light);">Professionelle Websites für Handwerk und Mittelstand.</p>
+        </div>
+        <div class="footer-links">
+          <h4 style="color: var(--text-main);">Rechtliches</h4>
+          <ul>
+            <li><a href="impressum.html" style="color: var(--text-light);">Impressum</a></li>
+            <li><a href="datenschutz.html" style="color: var(--text-light);">Datenschutz</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4 style="color: var(--text-main);">Kontakt</h4>
+          <ul>
+            <li><a href="mailto:info@webrisestudio.de" style="color: var(--text-light);">info@webrisestudio.de</a></li>
+            <li><a href="kontakt.html" style="color: var(--text-light);">Jetzt anfragen</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom" style="border-top: 1px solid var(--border-color); color: var(--text-light);">
+        <p>&copy; 2026 Webrise Studio. Alle Rechte vorbehalten.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
