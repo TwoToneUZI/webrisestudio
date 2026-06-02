@@ -41,3 +41,22 @@ document.addEventListener('DOMContentLoaded', () => {
   // Trigger once on load
   revealOnScroll();
 });
+
+// FAQ accordion
+document.querySelectorAll('.faq-question').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var item = this.closest('.faq-item');
+    var answer = item.querySelector('.faq-answer');
+    var isOpen = item.classList.contains('open');
+    // Close all
+    document.querySelectorAll('.faq-item').forEach(function(i) {
+      i.classList.remove('open');
+      i.querySelector('.faq-answer').style.display = 'none';
+    });
+    // Toggle clicked
+    if (!isOpen) {
+      item.classList.add('open');
+      answer.style.display = 'block';
+    }
+  });
+});

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://webrisestudio.de/sitemap.xml
