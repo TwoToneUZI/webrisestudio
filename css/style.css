@@ -172,6 +172,7 @@ img {
 
 .logo span {
   color: var(--primary);
+  display: inline-block;
 }
 
 .nav-links {
@@ -805,20 +806,7 @@ footer {
   animation: gradient-shift 4s ease infinite;
 }
 
-/* 2 – Pulsierender Glow auf CTA-Button */
-@keyframes btn-glow {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(0, 82, 204, 0.4), var(--shadow-md); }
-  50%       { box-shadow: 0 0 0 10px rgba(0, 82, 204, 0), var(--shadow-md); }
-}
-
-.hero .btn-primary {
-  animation: btn-glow 2.5s ease-in-out infinite;
-}
-
-.hero .btn-primary:hover {
-  animation: none;
-  box-shadow: var(--shadow-lg);
-}
+/* 2 – Kein Glow auf CTA-Button (entfernt) */
 
 /* 3 – Card Shine / Light-Sweep auf Hover */
 .card {
@@ -848,12 +836,24 @@ footer {
   left: 130%;
 }
 
-/* 4 – Floating-Animation auf Hero-Bild */
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50%       { transform: translateY(-10px); }
+/* 4 – Zoom on Hover auf Hero-Bild */
+.hero-image--float img {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.hero-image--float {
-  animation: float 4s ease-in-out infinite;
+.hero-image--float:hover img {
+  transform: scale(1.05);
+}
+
+/* Logo "Studio" Einmal-Explosion beim Seitenaufruf */
+@keyframes studio-explode {
+  0%   { transform: scale(3) rotate(-8deg); opacity: 0; filter: blur(6px); }
+  60%  { transform: scale(0.92) rotate(2deg); opacity: 1; filter: blur(0); }
+  80%  { transform: scale(1.06) rotate(-1deg); }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; filter: blur(0); }
+}
+
+.logo span {
+  animation: studio-explode 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: 0.15s;
 }
