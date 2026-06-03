@@ -784,3 +784,76 @@ footer {
 }
 .faq-item.open .faq-icon { transform: rotate(45deg); }
 .faq-answer a { color: var(--primary); text-decoration: underline; }
+
+/* ============================================================
+   VISUELLE EFFEKTE
+   ============================================================ */
+
+/* 1 – Animierter Gradient-Text */
+@keyframes gradient-shift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.gradient-text {
+  background: linear-gradient(270deg, #0052cc, #1e88e5, #00c6ff, #0052cc);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-shift 4s ease infinite;
+}
+
+/* 2 – Pulsierender Glow auf CTA-Button */
+@keyframes btn-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(0, 82, 204, 0.4), var(--shadow-md); }
+  50%       { box-shadow: 0 0 0 10px rgba(0, 82, 204, 0), var(--shadow-md); }
+}
+
+.hero .btn-primary {
+  animation: btn-glow 2.5s ease-in-out infinite;
+}
+
+.hero .btn-primary:hover {
+  animation: none;
+  box-shadow: var(--shadow-lg);
+}
+
+/* 3 – Card Shine / Light-Sweep auf Hover */
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.45) 50%,
+    rgba(255,255,255,0) 100%
+  );
+  transform: skewX(-15deg);
+  transition: left 0.55s ease;
+  pointer-events: none;
+}
+
+.card:hover::after {
+  left: 130%;
+}
+
+/* 4 – Floating-Animation auf Hero-Bild */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-10px); }
+}
+
+.hero-image--float {
+  animation: float 4s ease-in-out infinite;
+}
