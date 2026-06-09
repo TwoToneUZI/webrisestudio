@@ -19,7 +19,6 @@
       overflow: hidden;
       border-radius: var(--radius-sm);
       margin-bottom: 1.5rem;
-      position: relative;
       cursor: pointer;
     }
     .ref-preview img {
@@ -27,11 +26,14 @@
       height: auto;
       display: block;
       transform: translateY(0);
-      transition: transform 4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      transition: transform 5s ease-in-out;
       will-change: transform;
     }
+    /* translateY(-100%) = 100% of the img's own rendered height.
+       calc(-100% + 250px) moves the image up exactly far enough
+       to reveal its bottom edge in the 250px viewport. */
     .ref-preview:hover img {
-      transform: translateY(var(--scroll-distance, -60%));
+      transform: translateY(calc(-100% + 250px));
     }
   </style>
   <link rel="icon" type="image/png" href="favicon.png">
@@ -72,17 +74,17 @@
           <!-- Müller SHK -->
           <div class="card" style="padding: 1.5rem;">
             <div class="ref-preview">
-              <img loading="lazy" src="mueller-shk-preview.webp" alt="Müller SHK - Stuttgart">
+              <img src="mueller-shk-preview.webp" alt="Müller SHK - Stuttgart">
             </div>
             <h3 class="card-title">Müller SHK – Stuttgart</h3>
             <p>Moderner Webauftritt für einen SHK-Meisterbetrieb – mit Projektanfrage-Formular, Karriereseite und Google-Bewertungen.</p>
             <a href="https://webrisestudiode.github.io/mueller-shk" target="_blank" class="btn btn-secondary btn-block mt-2">Website ansehen</a>
           </div>
-          
+
           <!-- Schmidt Elektro -->
           <div class="card" style="padding: 1.5rem;">
             <div class="ref-preview">
-              <img loading="lazy" src="schmidt-elektro-preview.webp" alt="Schmidt Elektro - München">
+              <img src="schmidt-elektro-preview.webp" alt="Schmidt Elektro - München">
             </div>
             <h3 class="card-title">Schmidt Elektro – München</h3>
             <p>Professioneller Online-Auftritt für einen Elektromeisterbetrieb – mit Photovoltaik, Wallbox und Smart Home Leistungen.</p>
@@ -92,7 +94,7 @@
           <!-- Weber Malerbetrieb -->
           <div class="card" style="padding: 1.5rem;">
             <div class="ref-preview">
-              <img loading="lazy" src="maler-weber-preview.webp" alt="Weber Malerbetrieb - München">
+              <img src="maler-weber-preview.webp" alt="Weber Malerbetrieb - München">
             </div>
             <h3 class="card-title">Weber Malerbetrieb – München</h3>
             <p>Frischer moderner Auftritt für einen Malerbetrieb – mit Vorher-Nachher Bildern, Karriereseite und Kontaktformular.</p>
@@ -102,7 +104,7 @@
           <!-- Fischer Dachtechnik -->
           <div class="card" style="padding: 1.5rem;">
             <div class="ref-preview">
-              <img loading="lazy" src="fischer-dachtechnik-preview.webp" alt="Fischer Dachtechnik - Stuttgart">
+              <img src="fischer-dachtechnik-preview.webp" alt="Fischer Dachtechnik - Stuttgart">
             </div>
             <h3 class="card-title">Fischer Dachtechnik – Stuttgart</h3>
             <p>Industrielles Dark-Design für einen Dachdeckermeister – mit Sturmnotdienst-CTA, Versicherungsabwicklung und 24h-Badge.</p>
@@ -112,7 +114,7 @@
           <!-- Bauer Fliesen -->
           <div class="card" style="padding: 1.5rem;">
             <div class="ref-preview">
-              <img loading="lazy" src="bauer-fliesen-preview.webp" alt="Bauer Fliesen & Naturstein - München">
+              <img src="bauer-fliesen-preview.webp" alt="Bauer Fliesen & Naturstein - München">
             </div>
             <h3 class="card-title">Bauer Fliesen & Naturstein – München</h3>
             <p>Elegantes Gold-Design für einen Fliesenleger – mit Naturstein-Sparte, Designberaterin und Großformat-Referenzen.</p>
@@ -122,7 +124,7 @@
           <!-- Wagner Schreinerei -->
           <div class="card" style="padding: 1.5rem;">
             <div class="ref-preview">
-              <img loading="lazy" src="wagner-schreinerei-preview.webp" alt="Wagner Schreinerei - Freiburg">
+              <img src="wagner-schreinerei-preview.webp" alt="Wagner Schreinerei - Freiburg">
             </div>
             <h3 class="card-title">Wagner Schreinerei – Freiburg</h3>
             <p>Warmes Holz-Design für einen Schreinermeister – mit Maßmöbel-Konfigurator, Restaurierungsreferenzen und Treppensparte.</p>
@@ -132,7 +134,7 @@
           <!-- Hoffmann Stuckateur -->
           <div class="card" style="padding: 1.5rem;">
             <div class="ref-preview">
-              <img loading="lazy" src="hoffmann-stuckateur-preview.webp" alt="Hoffmann Stuckateur - Heidelberg">
+              <img src="hoffmann-stuckateur-preview.webp" alt="Hoffmann Stuckateur - Heidelberg">
             </div>
             <h3 class="card-title">Hoffmann Stuckateur – Heidelberg</h3>
             <p>Klassisch-elegantes Cormorant-Design – mit BAFA-Förderhinweis für WDVS, historischer Stuckrestaurierung und Fassadensanierung.</p>
@@ -228,25 +230,5 @@
   </a>
 
   <script src="js/script.js"></script>
-  <script>
-    // Set scroll-distance per preview so hover animation reaches the very bottom
-    function initScrollPreviews() {
-      document.querySelectorAll(".ref-preview").forEach(function(wrapper) {
-        var img = wrapper.querySelector("img");
-        function setDistance() {
-          var wrapperH = wrapper.clientHeight;
-          var imgH = img.naturalHeight * (wrapper.clientWidth / img.naturalWidth);
-          var dist = Math.max(0, imgH - wrapperH);
-          wrapper.style.setProperty("--scroll-distance", "-" + dist + "px");
-        }
-        if (img.complete && img.naturalHeight) {
-          setDistance();
-        } else {
-          img.addEventListener("load", setDistance);
-        }
-      });
-    }
-    document.addEventListener("DOMContentLoaded", initScrollPreviews);
-  </script>
 </body>
 </html>
