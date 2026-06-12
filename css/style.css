@@ -857,3 +857,25 @@ footer {
   animation: studio-explode 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
   animation-delay: 0.15s;
 }
+
+/* ── Banner-Fix: Navbar immer über dem Banner ──────────────────── */
+.navbar,
+header.header,
+.header {
+  z-index: 100000 !important;
+}
+#personalized-banner {
+  z-index: 99998 !important;
+}
+@media (max-width: 768px) {
+  /* Logo umbrechen statt abschneiden */
+  .nav-logo,
+  .logo,
+  .brand-name,
+  .navbar-brand {
+    white-space: normal !important;
+    word-break: break-word !important;
+    font-size: clamp(0.85rem, 3.5vw, 1.2rem) !important;
+    max-width: calc(100vw - 80px) !important;
+  }
+}

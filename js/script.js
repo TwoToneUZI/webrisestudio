@@ -60,3 +60,26 @@ document.querySelectorAll('.faq-question').forEach(function(btn) {
     }
   });
 });
+
+// Banner unter der Navbar positionieren – damit Hamburger immer erreichbar ist
+(function () {
+  function fixBannerPosition() {
+    var banner = document.getElementById('personalized-banner');
+    if (!banner) return;
+    var isVisible = banner.style.display !== 'none' && banner.offsetHeight > 0;
+    if (!isVisible) return;
+    var navbar = document.querySelector('.navbar, header.header, .header');
+    if (!navbar) return;
+    var navH = navbar.offsetHeight || 60;
+    banner.style.top = navH + 'px';
+    banner.style.position = 'fixed';
+    banner.style.zIndex = '99998';
+    var spacer = document.getElementById('ws-banner-spacer');
+    if (spacer) spacer.style.height = (navH + banner.offsetHeight) + 'px';
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', fixBannerPosition);
+  } else {
+    fixBannerPosition();
+  }
+})();
