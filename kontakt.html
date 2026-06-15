@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kontakt | Webrise Studio</title>
-  <meta name="description" content="Kostenlose Beratung anfordern. Wir bauen Ihre neue Firmenwebsite.">
+  <title>Kostenloses Erstgespräch | Webrise Studio</title>
+  <meta name="description" content="Kostenloses Erstgespräch anfragen. Ich bespreche mit Ihnen was für Ihren Betrieb Sinn macht – KI-Assistent, Automation oder Website. Kein Druck, keine Verpflichtung.">
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://webrisestudio.de/kontakt.html">
-  <meta property="og:title" content="Kontakt | Webrise Studio">
-  <meta property="og:description" content="Kostenloses Erstgespräch mit Webrise Studio anfragen. Wir bauen Ihre professionelle Handwerker-Website – schnell, einfach, Festpreis.">
+  <meta property="og:title" content="Kostenloses Erstgespräch | Webrise Studio">
+  <meta property="og:description" content="30 Minuten – ich bespreche mit Ihnen was für Ihren Betrieb Sinn macht. Kein Druck, keine Verpflichtung.">
   <meta property="og:image" content="https://webrisestudio.de/ueber-uns.webp">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="css/style.css">
@@ -27,10 +27,11 @@
       </button>
       <div class="nav-links">
         <a href="index.html">Startseite</a>
-        <a href="pakete.html">Pakete & Extras</a>
-        <a href="ueber-mich.html">Über uns</a>
-        <a href="referenzen.html">Referenzen</a>
-        <a href="kontakt.html" class="btn btn-primary" style="background-color: var(--primary-dark)">Kontakt</a>
+        <a href="ki-loesungen.html">KI-Lösungen</a>
+        <a href="pakete.html">Websites</a>
+        <a href="ueber-mich.html">Über mich</a>
+        <a href="referenzen.html">Demo</a>
+        <a href="kontakt.html" class="btn btn-primary" style="background-color: var(--primary-dark)">Kostenloses Gespräch</a>
       </div>
     </div>
   </nav>
@@ -39,17 +40,17 @@
     <section class="section">
       <div class="container reveal">
         <div class="text-center mb-4">
-          <h1>Kontaktieren Sie uns</h1>
-          <p>Wir melden uns schnellstmöglich bei Ihnen – in der Regel innerhalb von 1-2 Werktagen.<br>Sie können uns auch direkt eine E-Mail schreiben an: <strong>info@webrisestudio.de</strong></p>
+          <h1>Kostenloses Erstgespräch vereinbaren</h1>
+          <p>30 Minuten – ich bespreche mit Ihnen was am meisten Zeit kostet und was ich dagegen tun kann.<br>Kein Druck, keine Verpflichtung. Einfach anfragen.</p>
+          <p style="margin-top: 0.5rem;">Sie können mich auch direkt erreichen: <strong><a href="tel:+491782353158">+49 178 2353158</a></strong> oder <strong><a href="mailto:info@webrisestudio.de">info@webrisestudio.de</a></strong></p>
         </div>
 
         <div class="form-card">
-          <!-- Formspree Integration Placeholder -->
           <form id="contact-form" action="https://formspree.io/f/xvzlalwb" method="POST">
-            
+
             <div class="form-group">
               <label for="name" class="form-label">Ihr Name / Firmenname</label>
-              <input type="text" id="name" name="name" class="form-control" required placeholder="Geben Sie Ihren Namen ein">
+              <input type="text" id="name" name="name" class="form-control" required placeholder="z. B. Müller SHK oder Hans Müller">
             </div>
 
             <div class="grid" style="gap: 1.5rem; margin-bottom: 0;">
@@ -57,7 +58,6 @@
                 <label for="email" class="form-label">E-Mail Adresse</label>
                 <input type="email" id="email" name="email" class="form-control" required placeholder="ihre@email.de">
               </div>
-              
               <div class="form-group">
                 <label for="phone" class="form-label">Telefonnummer</label>
                 <input type="tel" id="phone" name="phone" class="form-control" required placeholder="0123 456789">
@@ -65,38 +65,24 @@
             </div>
 
             <div class="form-group">
-              <label for="package" class="form-label">Welches Paket interessiert Sie?</label>
-              <select id="package" name="package" class="form-control" required>
+              <label for="topic" class="form-label">Womit kann ich Ihnen helfen?</label>
+              <select id="topic" name="topic" class="form-control" required>
                 <option value="" disabled selected>Bitte wählen...</option>
-                <option value="Starter">Starter - 2.799€</option>
-                <option value="Professional">Professional - 3.299€</option>
-                <option value="Premium">Premium - 3.899€</option>
-                <option value="Komplett-Neustart">Komplett-Neustart – Auf Anfrage</option>
-                <option value="Individuell">Individuelles Angebot – andere Branche</option>
-                <option value="Unsicher">Ich bin noch unsicher</option>
+                <option value="KI-Assistent">Digitale Assistentin – Anrufe automatisch entgegennehmen</option>
+                <option value="Automation">Automation – Angebote, Rechnungen, Bewertungen</option>
+                <option value="Termin">Termin-Automation – Kunden buchen selbst</option>
+                <option value="Website">Neue Website</option>
+                <option value="Beides">Website + KI / Automation</option>
+                <option value="Unsicher">Ich bin noch unsicher – einfach beraten lassen</option>
               </select>
             </div>
 
             <div class="form-group">
-              <label for="extras" class="form-label">Möchten Sie Extras dazubuchen?</label>
-              <select id="extras" name="extras" class="form-control">
-                <option value="Keine" selected>Nein / Noch nicht sicher</option>
-                <option value="Google Maps">Google Maps Optimierung - 499€</option>
-                <option value="Wartungsvertrag">Wartungsvertrag - 79€/Monat</option>
-                <option value="SEO">SEO-Grundpaket - 599€</option>
-                <option value="Logo">Logo-Auffrischung - 349€</option>
-                <option value="WhatsApp">WhatsApp-Kontaktbutton - 99€</option>
-                <option value="Statistik">Besucher-Statistik einrichten - 149€</option>
-                <option value="Mehrere">Mehrere Extras (bitte in Nachricht erwähnen)</option>
-              </select>
+              <label for="message" class="form-label">Kurze Beschreibung (optional)</label>
+              <textarea id="message" name="message" class="form-control" placeholder="Was beschäftigt Sie gerade? Was nimmt am meisten Zeit in Anspruch? Je mehr Sie schreiben, desto besser kann ich mich vorbereiten."></textarea>
             </div>
 
-            <div class="form-group">
-              <label for="message" class="form-label">Ihre Nachricht</label>
-              <textarea id="message" name="message" class="form-control" placeholder="Optional – haben Sie noch etwas hinzuzufügen?"></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary btn-block" style="font-size: 1.125rem; padding: 1rem;">Jetzt Anfrage absenden</button>
+            <button type="submit" class="btn btn-primary btn-block" style="font-size: 1.125rem; padding: 1rem;">Anfrage absenden – kostenlos & unverbindlich</button>
           </form>
         </div>
       </div>
@@ -109,7 +95,15 @@
       <div class="footer-content" style="margin-bottom: 2rem;">
         <div class="footer-brand">
           <h3 style="color: var(--text-main);">Webrise Studio</h3>
-          <p style="color: var(--text-light);">Professionelle Websites für Handwerk und Mittelstand.</p>
+          <p style="color: var(--text-light);">Digitale Lösungen für Handwerksbetriebe.</p>
+        </div>
+        <div class="footer-links">
+          <h4 style="color: var(--text-main);">Leistungen</h4>
+          <ul>
+            <li><a href="ki-loesungen.html" style="color: var(--text-light);">KI-Lösungen</a></li>
+            <li><a href="pakete.html" style="color: var(--text-light);">Websites</a></li>
+            <li><a href="referenzen.html" style="color: var(--text-light);">Referenzen</a></li>
+          </ul>
         </div>
         <div class="footer-links">
           <h4 style="color: var(--text-main);">Rechtliches</h4>
@@ -121,8 +115,8 @@
         <div class="footer-links">
           <h4 style="color: var(--text-main);">Kontakt</h4>
           <ul>
+            <li><a href="tel:+491782353158" style="color: var(--text-light);">+49 178 2353158</a></li>
             <li><a href="mailto:info@webrisestudio.de" style="color: var(--text-light);">info@webrisestudio.de</a></li>
-            <li><a href="kontakt.html" style="color: var(--text-light);">Jetzt anfragen</a></li>
           </ul>
         </div>
       </div>
@@ -132,8 +126,7 @@
     </div>
   </footer>
 
-  <!-- WhatsApp Button -->
-  <a href="https://wa.me/491782353158?text=Hallo%20Webrise%20Studio,%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20neue%20Website." class="whatsapp-float" target="_blank">
+  <a href="https://wa.me/491782353158?text=Hallo%20Webrise%20Studio,%20ich%20interessiere%20mich%20f%C3%BCr%20Ihre%20Leistungen." class="whatsapp-float" target="_blank">
     <img loading="lazy" src="whatsapp.svg" alt="WhatsApp">
   </a>
 
@@ -144,20 +137,15 @@
       e.preventDefault();
       const submitBtn = form.querySelector('button[type="submit"]');
       const originalBtnText = submitBtn.innerText;
-      
       submitBtn.innerText = 'Wird gesendet...';
       submitBtn.disabled = true;
-
       try {
         const formData = new FormData(form);
         const response = await fetch(form.action, {
           method: 'POST',
           body: formData,
-          headers: {
-            'Accept': 'application/json'
-          }
+          headers: { 'Accept': 'application/json' }
         });
-
         if (response.ok) {
           window.location.href = 'https://webrisestudio.de/danke.html';
         } else {
