@@ -924,6 +924,17 @@ header.header,
   white-space: nowrap;
 }
 
+@media (max-width: 600px) {
+  .hero-badges {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .hero-badge {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.75rem;
+  }
+}
+
 /* ── Shimmer auf ki-card ───────────────────────────────── */
 .ki-card::after {
   content: '';
@@ -1194,6 +1205,12 @@ header.header,
   padding: 2rem;
 }
 
+@media (max-width: 768px) {
+  .foto-placeholder {
+    min-height: 180px;
+  }
+}
+
 .foto-placeholder-icon {
   font-size: 3rem;
   opacity: 0.4;
@@ -1211,4 +1228,5 @@ header.header,
   .hero-subline { max-width: 100%; }
   .ki-grid { grid-template-columns: 1fr; }
   .pain-grid { grid-template-columns: 1fr; }
+  .hero-image iframe { height: 280px !important; }
 }
