@@ -1257,8 +1257,14 @@ header.header,
 
   /* Animation auf Mobile komplett ausblenden */
   .hero-image,
-  .hero-image--float {
+  .hero-image--float,
+  .hero .hero-image,
+  .hero .hero-image--float,
+  .hero-image iframe {
     display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    overflow: hidden !important;
   }
 
   /* Über mich / Unterseiten: weniger Abstand oben */

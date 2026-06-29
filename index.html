@@ -80,6 +80,18 @@
       flex: 0 0 38% !important;
       max-width: 38% !important;
     }
+    /* Animation auf Mobile ausblenden */
+    @media (max-width: 768px) {
+      .hero-image,
+      .hero-image--float,
+      .hero-image--float iframe,
+      .hero-badges {
+        display: none !important;
+        visibility: hidden !important;
+        height: 0 !important;
+        overflow: hidden !important;
+      }
+    }
   </style>
 </head>
 <body>
