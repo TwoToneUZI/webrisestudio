@@ -38,7 +38,11 @@
   <style>
     /* Hero: Crailsheim Hintergrundbild + Overlay */
     .hero {
-      background: linear-gradient(rgba(0, 50, 130, 0.7), rgba(0, 50, 130, 0.7)), url('crailsheim.jpg') center/cover no-repeat !important;
+      background-color: #003282;
+      background-image: linear-gradient(rgba(0, 50, 130, 0.7), rgba(0, 50, 130, 0.7)), url('crailsheim.jpg');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
       padding: 6.5rem 0 2.5rem !important;
       min-height: auto !important;
     }
@@ -67,14 +71,14 @@
     .hero .hero-bullets li {
       margin-bottom: 0.3rem !important;
     }
-    /* Flex-Gap reduzieren, Bild kleiner */
+    /* Flex-Gap reduzieren, Bild kleiner (Desktop) */
     .hero .hero-flex {
       gap: 2.5rem !important;
       align-items: center !important;
     }
     .hero .hero-image {
-      flex: 0 0 35% !important;
-      max-width: 35% !important;
+      flex: 0 0 38% !important;
+      max-width: 38% !important;
     }
   </style>
 </head>

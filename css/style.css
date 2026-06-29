@@ -1230,3 +1230,92 @@ header.header,
   .pain-grid { grid-template-columns: 1fr; }
   .hero-image iframe { height: 280px !important; }
 }
+
+/* ── Mobile Optimierungen ─────────────────────────────── */
+@media (max-width: 768px) {
+
+  /* Schriftgrößen reduzieren – max 16px Text, 24-28px Überschriften */
+  h1 {
+    font-size: clamp(1.5rem, 7vw, 1.75rem) !important;
+  }
+  h2 {
+    font-size: clamp(1.35rem, 6.5vw, 1.625rem) !important;
+  }
+  p {
+    font-size: 1rem;
+  }
+
+  /* Sektionen: mehr Luft */
+  .section {
+    padding: 2.5rem 0;
+  }
+
+  /* Hero: Fallback-Farbe damit kein weißer Balken erscheint */
+  .hero {
+    background-color: #003282;
+  }
+
+  /* Animation auf Mobile komplett ausblenden */
+  .hero-image,
+  .hero-image--float {
+    display: none !important;
+  }
+
+  /* Über mich / Unterseiten: weniger Abstand oben */
+  .page-main {
+    padding-top: 72px !important;
+  }
+
+  /* Foto Platzhalter kompakter */
+  .foto-placeholder {
+    min-height: 150px;
+    margin-bottom: 1rem;
+  }
+
+  /* KI-Karten – Schrift, Abstände, Checkmark-Ausrichtung */
+  .ki-card {
+    padding: 1.375rem 1.25rem;
+  }
+
+  .ki-card h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--secondary);
+    color: var(--text-main);
+  }
+
+  .ki-card p {
+    font-size: 0.9375rem;
+    line-height: 1.65;
+    margin-bottom: 1rem;
+  }
+
+  .ki-card ul {
+    margin-bottom: 1.25rem;
+  }
+
+  .ki-card ul li {
+    font-size: 0.9rem;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.45rem;
+    line-height: 1.5;
+  }
+
+  .ki-card ul li::before {
+    flex-shrink: 0;
+    margin-top: 0.1em;
+    line-height: 1.5;
+  }
+
+  .ki-grid {
+    gap: 1rem;
+  }
+
+  /* Abstand unter Sektions-Überschriften */
+  .text-center.mb-4 {
+    margin-bottom: 1.5rem;
+  }
+}
