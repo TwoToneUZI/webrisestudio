@@ -565,6 +565,22 @@ footer {
     text-align: center;
   }
 
+  .hero-text {
+    padding-right: 75px;
+  }
+
+  .hero-intro {
+    text-align: left;
+  }
+
+  .hero-bullets {
+    text-align: left;
+  }
+
+  .hero-bullets li {
+    align-items: flex-start;
+  }
+
   .hero-flex {
     flex-direction: column;
     gap: 3rem;
@@ -627,10 +643,15 @@ footer {
 
 @media (max-width: 768px) {
   .whatsapp-float {
-    width: 60px;
-    height: 60px;
-    bottom: 25px;
-    right: 25px;
+    width: 52px;
+    height: 52px;
+    bottom: 20px;
+    right: 15px;
+  }
+
+  .whatsapp-float img {
+    width: 28px;
+    height: 28px;
   }
 }
 
