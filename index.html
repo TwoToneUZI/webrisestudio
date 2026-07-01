@@ -80,7 +80,7 @@
       flex: 0 0 38% !important;
       max-width: 38% !important;
     }
-    /* Animation auf Mobile ausblenden */
+    /* Animation + Desktop-Hero-Bild auf Mobile ausblenden */
     @media (max-width: 768px) {
       .hero-image,
       .hero-image--float,
@@ -92,9 +92,116 @@
         overflow: hidden !important;
       }
     }
+
+    /* Desktop: Mobile-only Elemente verstecken */
+    .hero-mobile-img { display: none; }
+    .hero-trust-mobile { display: none; }
+
+    /* ── MOBILE HERO KOMPLETT NEU ───────────────────────── */
     @media (max-width: 768px) {
+      /* Hintergrund: dunkel, kein Bild, kein Muster */
       .hero {
-        padding-bottom: 4rem !important;
+        background-color: #0f172a !important;
+        background-image: none !important;
+        padding: 5.5rem 0 5.5rem !important;
+        text-align: left !important;
+        overflow-x: hidden !important;
+      }
+
+      /* Hero-Flex: kein Gap, Hochformat */
+      .hero .hero-flex {
+        gap: 0 !important;
+      }
+
+      /* Hero-Text: kein rechtes Padding */
+      .hero .hero-text {
+        padding-right: 0 !important;
+        width: 100% !important;
+      }
+
+      /* 1. Headline */
+      .hero .hero-headline {
+        font-size: 2rem !important;
+        color: white !important;
+        text-align: left !important;
+        padding: 0 1.5rem !important;
+        margin-bottom: 1rem !important;
+        line-height: 1.25 !important;
+      }
+
+      /* 2. Bild (Startseite.jpg) */
+      .hero-mobile-img {
+        display: block !important;
+        width: calc(100% - 3rem) !important;
+        max-width: calc(100% - 3rem) !important;
+        height: auto !important;
+        margin: 0 1.5rem 1.25rem !important;
+        border-radius: 16px !important;
+        object-fit: cover !important;
+      }
+
+      /* 3. Beschreibungstext */
+      .hero .hero-intro {
+        color: rgba(255, 255, 255, 0.85) !important;
+        padding: 0 1.5rem !important;
+        text-align: left !important;
+        font-size: 0.975rem !important;
+        margin-bottom: 1rem !important;
+        line-height: 1.7 !important;
+      }
+
+      /* 4. Bullet Points */
+      .hero .hero-bullets {
+        padding: 0 1.5rem !important;
+        text-align: left !important;
+        margin-bottom: 1.25rem !important;
+      }
+
+      .hero .hero-bullets li {
+        color: white !important;
+        display: flex !important;
+        align-items: flex-start !important;
+        gap: 0.75rem !important;
+        margin-bottom: 0.75rem !important;
+        font-size: 0.975rem !important;
+        line-height: 1.5 !important;
+      }
+
+      .hero .hero-check {
+        color: #60a5fa !important;
+        flex-shrink: 0 !important;
+        margin-top: 2px !important;
+      }
+
+      /* 5. CTA Button – volle Breite */
+      .hero .btn-primary {
+        display: flex !important;
+        width: calc(100% - 3rem) !important;
+        margin: 0 1.5rem 0.75rem !important;
+        min-height: 52px !important;
+        text-align: center !important;
+        justify-content: center !important;
+        background-color: #0052cc !important;
+        color: white !important;
+        font-size: 1rem !important;
+        border-radius: 50px !important;
+        box-sizing: border-box !important;
+      }
+
+      /* 6. Trust Badges Zeile */
+      .hero-trust-mobile {
+        display: block !important;
+        font-size: 0.75rem !important;
+        color: #94a3b8 !important;
+        text-align: center !important;
+        padding: 0 1.5rem !important;
+        margin: 0 !important;
+        line-height: 1.6 !important;
+      }
+
+      /* WhatsApp Button: genug Abstand nach unten */
+      body {
+        padding-bottom: 0 !important;
       }
     }
   </style>
@@ -125,6 +232,7 @@
         <div class="hero-flex">
           <div class="hero-text">
             <h1 class="hero-headline">Smarte Systeme für Handwerker –<br>mehr Umsatz, weniger Aufwand.</h1>
+            <img class="hero-mobile-img" src="Startseite.jpg" alt="Webrise Studio – Smarte Systeme für Handwerker" loading="eager">
             <p class="hero-intro">Ich helfe Handwerksbetrieben dabei mehr Aufträge zu bekommen und weniger Zeit mit Verwaltung zu verbringen. Dafür baue ich digitale Systeme die automatisch für Sie arbeiten – Anrufe annehmen, Angebote erstellen, Rechnungen vorbereiten. Mit digitaler Prozessoptimierung läuft Ihr Betrieb effizienter – weniger manuelle Arbeit, mehr Zeit für das Wesentliche.</p>
             <ul class="hero-bullets">
               <li><span class="hero-check">✓</span> Mehr Aufträge durch 24/7 Erreichbarkeit</li>
@@ -133,6 +241,7 @@
               <li><span class="hero-check">✓</span> Prozesse die Stress minimieren und die Arbeit produktiver machen</li>
             </ul>
             <a href="kontakt.html" class="btn btn-primary" style="font-size: 1.05rem; padding: 1rem 2.25rem;">Kostenloses Erstgespräch vereinbaren</a>
+            <p class="hero-trust-mobile">🛡️ DSGVO-konform · 📍 Deutschlandweit · 🇩🇪 Serverstandort Deutschland</p>
           </div>
           <div class="hero-image hero-image--float">
             <!-- TODO: Foto ersetzen wenn vorhanden -->
