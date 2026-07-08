@@ -118,6 +118,39 @@
       display: block;
     }
 
+    /* ── PERSON TRUST SECTION ─────────────────── */
+    .trust-person-flex {
+      display: flex;
+      align-items: center;
+      gap: 3.5rem;
+    }
+    .trust-person-img {
+      flex: 0 0 260px;
+      max-width: 260px;
+    }
+    .trust-person-img img {
+      width: 100%;
+      border-radius: 16px;
+      object-fit: cover;
+      display: block;
+    }
+    .trust-person-text { flex: 1; }
+    .trust-person-text h2 {
+      font-size: clamp(1.3rem, 2vw, 1.75rem);
+      margin-bottom: 1rem;
+    }
+    .trust-person-text p {
+      color: var(--text-light);
+      line-height: 1.75;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+    .trust-person-text p:last-child { margin-bottom: 0; }
+    @media (max-width: 768px) {
+      .trust-person-flex { flex-direction: column; gap: 2rem; }
+      .trust-person-img { max-width: 180px; }
+    }
+
     /* ── TRUST BADGE ───────────────────────────── */
     .trust-pill {
       display: inline-block;
@@ -337,7 +370,23 @@
       </div>
     </section>
 
-    <!-- 6. Formular (bg-alt) -->
+    <!-- 6. Warum ich das kenne (white) -->
+    <section class="section">
+      <div class="container reveal">
+        <div class="trust-person-flex">
+          <img class="trust-person-img" src="uebermich-bildd.jpg" alt="Ahad Habib – Webrise Studio" style="flex:0 0 260px;max-width:260px;border-radius:16px;object-fit:cover;">
+          <div class="trust-person-text">
+            <span class="ki-badge">Warum mir das am Herzen liegt</span>
+            <h2>Besetztes Telefon. Warteschleife. Praxis schon zu.</h2>
+            <p>Das kennt jeder – man versucht seinen Arzt zu erreichen, das Telefon ist besetzt, man hält in der Leitung, und irgendwann macht die Praxis einfach zu. Man hat niemanden erreicht und fängt morgen von vorne an.</p>
+            <p>Ich habe jahrelang mit Handwerksbetrieben gearbeitet und ihnen geholfen, keinen Anruf mehr zu verpassen – weil jeder verpasste Anruf ein verlorener Auftrag ist. Genau dieses Problem gibt es in Arztpraxen genauso. Nur dass es hier nicht um Aufträge geht, sondern um Patienten die Hilfe brauchen und niemanden erreichen.</p>
+            <p>Deshalb helfe ich jetzt auch Praxen dabei, für ihre Patienten erreichbar zu sein – ohne dass das Team ständig ans Telefon rennt.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Formular (bg-alt) -->
     <section class="section bg-alt" id="anfragen">
       <div class="container reveal">
         <div class="text-center mb-4">
