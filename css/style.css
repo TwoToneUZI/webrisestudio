@@ -191,6 +191,10 @@ img {
   color: var(--primary);
 }
 
+.nav-links .btn-primary {
+  color: white;
+}
+
 .hamburger {
   display: none;
   background: none;
@@ -462,14 +466,14 @@ textarea.form-control {
 footer {
   background: var(--text-main);
   color: white;
-  padding: 4rem 0 2rem;
+  padding: 2.5rem 0 1.5rem;
 }
 
 .footer-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 3rem;
-  margin-bottom: 3rem;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .footer-brand h3 {
@@ -499,7 +503,7 @@ footer {
 
 .footer-bottom {
   border-top: 1px solid rgba(255,255,255,0.1);
-  padding-top: 2rem;
+  padding-top: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
