@@ -55,6 +55,24 @@
       width: 100%;
       border-radius: 16px;
       display: block;
+      box-shadow: 0 24px 48px rgba(0,0,0,0.35);
+    }
+    .lp-hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+      justify-content: center;
+    }
+    .lp-hero-badge {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: rgba(255,255,255,0.9);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.35rem 0.9rem;
+      border-radius: 50px;
+      backdrop-filter: blur(6px);
     }
 
     /* Hero text */
@@ -233,6 +251,11 @@
           </div>
           <div class="lp-hero-img-d">
             <img src="Startseite.jpg" alt="KI-Assistent für Arztpraxen – Webrise Studio" loading="eager">
+            <div class="lp-hero-badges">
+              <span class="lp-hero-badge">🛡️ DSGVO-konform</span>
+              <span class="lp-hero-badge">🗓️ Terminbuchung 24/7</span>
+              <span class="lp-hero-badge">🇩🇪 Server Deutschland</span>
+            </div>
           </div>
         </div>
       </div>
@@ -374,7 +397,9 @@
     <section class="section">
       <div class="container reveal">
         <div class="trust-person-flex">
-          <img class="trust-person-img" src="uebermich-bildd.jpg" alt="Ahad Habib – Webrise Studio" style="flex:0 0 260px;max-width:260px;border-radius:16px;object-fit:cover;">
+          <div class="trust-person-img">
+            <img src="uebermich-bildd.jpg" alt="Ahad Habib – Webrise Studio">
+          </div>
           <div class="trust-person-text">
             <span class="ki-badge">Warum mir das am Herzen liegt</span>
             <h2>Besetztes Telefon. Warteschleife. Praxis schon zu.</h2>
