@@ -4,359 +4,135 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KI-Assistent für Arztpraxen | Webrise Studio</title>
-  <meta name="description" content="Ihre Sprechstundenhilfe gehört zu den Patienten – nicht ans Telefon. KI-Telefon, WhatsApp Bot und automatische Terminerinnerungen für Praxen. DSGVO-konform aus Deutschland.">
+  <meta name="description" content="Ihre Sprechstundenhilfe gehört zu den Patienten – nicht ans Telefon. KI-Telefon, WhatsApp Bot und automatische Terminerinnerungen für Praxen. DSGVO-konform.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://webrisestudio.de/praxen.html">
   <meta property="og:title" content="KI-Assistent für Arztpraxen | Webrise Studio">
-  <meta property="og:description" content="Nie wieder Telefonstress. Automatische Terminbuchung, WhatsApp Bot und Terminerinnerungen für Praxen – DSGVO-konform, Server in Deutschland.">
+  <meta property="og:description" content="Automatische Terminbuchung und KI-Assistent für Praxen – DSGVO-konform, Server in Deutschland.">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png">
   <style>
-
-    /* ── HERO ─────────────────────────────────────────── */
-    .praxen-hero {
+    /* ── HERO ──────────────────────────────────── */
+    .hero {
       background: linear-gradient(155deg, #0f172a 0%, #003282 55%, #0052cc 100%);
-      padding: 6rem 0 4.5rem;
-      text-align: center;
+      padding: 6rem 0 5rem !important;
+      min-height: auto !important;
     }
-    .praxen-hero h1 {
-      color: white;
-      font-size: clamp(1.75rem, 4.5vw, 2.75rem);
-      line-height: 1.2;
-      margin-bottom: 1.25rem;
-      max-width: 680px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .praxen-hero .hero-sub {
-      color: rgba(255,255,255,0.82);
-      font-size: 1.05rem;
-      max-width: 560px;
-      margin: 0 auto 2.5rem;
-      line-height: 1.75;
-    }
-    .cta-group {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      align-items: center;
-    }
-    .btn-wa {
-      background: #25D366;
-      color: white !important;
-      padding: 1rem 2rem;
-      border-radius: 50px;
-      font-weight: 700;
-      font-size: 1.05rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.65rem;
-      box-shadow: 0 6px 24px rgba(37,211,102,0.4);
-      transition: all 0.2s;
-    }
-    .btn-wa:hover {
-      background: #1aad52;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 28px rgba(37,211,102,0.5);
-    }
-    .hero-tel {
-      color: rgba(255,255,255,0.8);
-      font-size: 1rem;
-      font-weight: 500;
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-    }
-    .hero-tel:hover { color: white; }
+    .hero h1 { color: white !important; font-size: clamp(1.75rem, 3vw, 2.5rem) !important; line-height: 1.2 !important; margin-bottom: 1rem !important; }
+    .hero p  { color: rgba(255,255,255,0.85) !important; max-width: 560px; margin: 0 auto 1.5rem !important; }
 
-    /* ── PAIN SECTION ─────────────────────────────────── */
-    .pain-section {
-      background: #0f172a;
-      padding: 4.5rem 0;
-    }
-    .pain-section h2 {
-      color: white;
-      text-align: center;
-      margin-bottom: 0.5rem;
-    }
-    .section-sub {
-      color: rgba(255,255,255,0.55);
-      text-align: center;
-      margin-bottom: 2.5rem;
-      font-size: 1rem;
-    }
-    .pain-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 0.875rem;
-    }
-    .pain-card {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.09);
-      border-radius: 14px;
-      padding: 1.25rem 1.375rem;
-      display: flex;
-      gap: 1rem;
-      align-items: flex-start;
-    }
-    .pain-icon {
-      font-size: 1.6rem;
-      flex-shrink: 0;
-      line-height: 1;
-      margin-top: 1px;
-    }
-    .pain-card h3 {
-      color: white;
-      font-size: 0.975rem;
-      font-weight: 600;
-      margin-bottom: 0.3rem;
-    }
-    .pain-card p {
-      color: rgba(255,255,255,0.58);
-      font-size: 0.875rem;
-      line-height: 1.55;
-      margin: 0;
-    }
-
-    /* ── SOLUTION SECTION ─────────────────────────────── */
-    .solution-section {
-      background: #0052cc;
-      padding: 4.5rem 0;
-    }
-    .solution-section h2 {
-      color: white;
-      text-align: center;
-      margin-bottom: 0.5rem;
-    }
-    .solution-section .section-sub {
-      color: rgba(255,255,255,0.72);
-    }
-    .solution-list {
-      display: flex;
-      flex-direction: column;
-      gap: 0.875rem;
-      max-width: 640px;
-      margin: 0 auto;
-    }
-    .solution-item {
-      background: rgba(255,255,255,0.13);
-      border-radius: 14px;
-      padding: 1.1rem 1.375rem;
-      display: flex;
-      gap: 1rem;
-      align-items: flex-start;
-    }
-    .sol-check {
-      color: #86efac;
-      font-size: 1.15rem;
-      font-weight: 800;
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
-    .solution-item p {
-      color: white;
-      font-size: 0.975rem;
-      font-weight: 500;
-      line-height: 1.55;
-      margin: 0;
-    }
-
-    /* ── PRODUCTS ─────────────────────────────────────── */
-    .praxen-product-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.25rem;
-    }
-    .praxen-product-card {
-      border: 2px solid var(--border-color);
-      border-radius: 16px;
-      padding: 2rem;
-      background: white;
-      transition: box-shadow 0.2s, border-color 0.2s;
-    }
-    .praxen-product-card:hover {
-      border-color: var(--primary);
-      box-shadow: var(--shadow-lg);
-    }
-    .p-icon {
-      font-size: 2.25rem;
-      margin-bottom: 1rem;
-      display: block;
-    }
-    .praxen-product-card h3 {
-      font-size: 1.15rem;
-      font-weight: 700;
-      margin-bottom: 0.6rem;
-      color: var(--text-main);
-    }
-    .praxen-product-card > p {
-      color: var(--text-light);
-      font-size: 0.925rem;
-      line-height: 1.65;
-      margin-bottom: 1.1rem;
-    }
-    .p-features {
+    /* Bullet list in hero */
+    .hero-blist {
       list-style: none;
       padding: 0;
-      margin: 0;
-      border-top: 1px solid var(--border-color);
-      padding-top: 1rem;
+      margin: 0 auto 1.75rem;
+      max-width: 460px;
+      text-align: left;
     }
-    .p-features li {
+    .hero-blist li {
       display: flex;
-      gap: 0.6rem;
       align-items: flex-start;
-      font-size: 0.875rem;
-      color: var(--text-main);
-      padding: 0.3rem 0;
-    }
-    .p-features li::before {
-      content: "✓";
-      color: var(--primary);
-      font-weight: 700;
-      flex-shrink: 0;
-    }
-
-    /* ── DSGVO ────────────────────────────────────────── */
-    .dsgvo-section {
-      background: #002a7a;
-      padding: 4.5rem 0;
-    }
-    .dsgvo-section h2 {
-      color: white;
-      text-align: center;
+      gap: 0.75rem;
+      color: rgba(255,255,255,0.9);
+      font-size: 1rem;
       margin-bottom: 0.5rem;
     }
-    .dsgvo-section .section-sub {
-      color: rgba(255,255,255,0.68);
-    }
-    .dsgvo-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 0.875rem;
-      max-width: 720px;
+    .hero-blist .chk { color: #60a5fa; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+
+    /* Mobile-only elements hidden on desktop */
+    .hero-img-m { display: none; }
+    .hero-trust-m { display: none; }
+
+    /* ── SOLUTION LIST ─────────────────────────── */
+    .sol-list {
+      max-width: 660px;
       margin: 0 auto;
+      list-style: none;
+      padding: 0;
     }
-    .dsgvo-item {
-      background: rgba(255,255,255,0.09);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 14px;
-      padding: 1.25rem 1.375rem;
+    .sol-list li {
       display: flex;
-      gap: 1rem;
       align-items: flex-start;
+      gap: 1rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border-color);
+      font-size: 1rem;
+      color: var(--text-main);
+      font-weight: 500;
     }
-    .dsgvo-icon {
-      font-size: 1.5rem;
-      flex-shrink: 0;
-    }
-    .dsgvo-item h4 {
-      color: white;
-      font-size: 0.975rem;
-      font-weight: 600;
-      margin-bottom: 0.25rem;
-    }
-    .dsgvo-item p {
-      color: rgba(255,255,255,0.62);
-      font-size: 0.865rem;
-      line-height: 1.55;
-      margin: 0;
+    .sol-list li:last-child { border-bottom: none; }
+    .sol-list .tick { color: var(--primary); font-weight: 800; font-size: 1.1rem; flex-shrink: 0; margin-top: 1px; }
+
+    /* ── DSGVO: pain-card ohne pain-number ────── */
+    .dsgvo-icon-tag {
+      font-size: 1.75rem;
+      margin-bottom: 0.75rem;
+      display: block;
     }
 
-    /* ── TRUST + UMBAU ────────────────────────────────── */
-    .trust-section {
-      background: var(--bg-alt);
-      padding: 4rem 0;
-      text-align: center;
-    }
-    .trust-badge {
+    /* ── TRUST BADGE ───────────────────────────── */
+    .trust-pill {
       display: inline-block;
-      background: var(--primary);
-      color: white;
+      background: var(--secondary);
+      color: var(--primary);
       font-size: 0.75rem;
       font-weight: 700;
       padding: 0.35rem 1.1rem;
       border-radius: 50px;
-      margin-bottom: 1.25rem;
-      letter-spacing: 0.06em;
+      margin-bottom: 1rem;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
     }
-    .trust-section h2 {
-      font-size: clamp(1.3rem, 3vw, 1.75rem);
-      margin-bottom: 1rem;
-    }
-    .trust-section > .container > p {
-      color: var(--text-light);
-      max-width: 560px;
-      margin: 0 auto 2rem;
-      line-height: 1.75;
-    }
-    .umbau-box {
-      background: white;
-      border: 1px solid var(--border-color);
-      border-left: 4px solid var(--primary);
-      border-radius: 12px;
-      padding: 1.25rem 1.5rem;
-      max-width: 520px;
-      margin: 0 auto;
-      text-align: left;
-      font-size: 0.9rem;
-      color: var(--text-light);
-      line-height: 1.6;
-    }
-    .umbau-box strong { color: var(--text-main); }
 
-    /* ── FINAL CTA ────────────────────────────────────── */
-    .final-cta {
-      background: #0f172a;
-      padding: 5rem 0;
-      text-align: center;
-    }
-    .final-cta h2 {
-      color: white;
-      font-size: clamp(1.5rem, 3.5vw, 2.25rem);
-      margin-bottom: 0.75rem;
-    }
-    .final-cta > .container > p {
-      color: rgba(255,255,255,0.65);
-      margin-bottom: 2.5rem;
-      font-size: 1rem;
-    }
-    .final-cta-buttons {
-      display: flex;
-      flex-direction: column;
-      gap: 1.25rem;
-      align-items: center;
-    }
-    .tel-big {
-      color: white;
-      font-size: 1.3rem;
-      font-weight: 700;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      transition: color 0.2s;
-    }
-    .tel-big:hover { color: #60a5fa; }
-
-    /* ── RESPONSIVE ───────────────────────────────────── */
-    @media (min-width: 600px) {
-      .pain-grid { grid-template-columns: 1fr 1fr; }
-      .dsgvo-grid { grid-template-columns: 1fr 1fr; }
-    }
-    @media (min-width: 768px) {
-      .cta-group { flex-direction: row; justify-content: center; }
-      .praxen-product-grid { grid-template-columns: repeat(3, 1fr); }
-      .final-cta-buttons { flex-direction: row; justify-content: center; }
+    /* ── MOBILE ────────────────────────────────── */
+    @media (max-width: 768px) {
+      .hero {
+        padding: 5.5rem 0 4.5rem !important;
+        text-align: left !important;
+      }
+      .hero h1 {
+        font-size: 2rem !important;
+        line-height: 1.25 !important;
+        margin-bottom: 1rem !important;
+        text-align: left !important;
+      }
+      .hero .text-center { text-align: left !important; }
+      .hero p {
+        text-align: left !important;
+        font-size: 1rem !important;
+        margin: 0 0 1rem !important;
+      }
+      .hero-img-m {
+        display: block !important;
+        width: 100% !important;
+        border-radius: 16px !important;
+        margin: 0 0 1.25rem !important;
+      }
+      .hero-blist { margin: 0 0 1.25rem !important; }
+      .hero .btn-primary {
+        display: flex !important;
+        width: 100% !important;
+        justify-content: center !important;
+        min-height: 52px !important;
+        box-sizing: border-box !important;
+      }
+      .hero-trust-m {
+        display: block !important;
+        font-size: 0.75rem !important;
+        color: #94a3b8 !important;
+        text-align: center !important;
+        margin-top: 0.75rem !important;
+        line-height: 1.6 !important;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Navigation -->
+  <!-- Navigation – identisch mit Hauptseite -->
   <nav class="navbar">
     <div class="container">
       <a href="index.html" class="logo">Webrise <span>Studio</span></a>
@@ -364,238 +140,242 @@
         <span></span><span></span><span></span>
       </button>
       <div class="nav-links">
-        <a href="tel:+491782353158">+49 178 2353158</a>
-        <a href="https://wa.me/491782353158?text=Hallo%20Webrise%20Studio%2C%20ich%20interessiere%20mich%20f%C3%BCr%20KI-L%C3%B6sungen%20f%C3%BCr%20meine%20Praxis." target="_blank" class="btn btn-primary">WhatsApp</a>
+        <a href="index.html">Startseite</a>
+        <a href="ki-loesungen.html">KI-Lösungen</a>
+        <a href="ueber-mich.html">Über mich</a>
+        <a href="#anfragen" class="btn btn-primary">Kostenloses Gespräch</a>
       </div>
     </div>
   </nav>
 
   <main>
 
-    <!-- Hero -->
-    <section class="praxen-hero">
-      <div class="container">
-        <h1>Ihre Sprechstundenhilfe gehört zu den Patienten –&nbsp;nicht ans Telefon.</h1>
-        <p class="hero-sub">Während Ihr Team behandelt, bucht unser KI-Assistent Termine, beantwortet Anfragen und erinnert Patienten automatisch – rund um die Uhr, ohne dass jemand abnehmen muss.</p>
-        <div class="cta-group">
-          <a href="https://wa.me/491782353158?text=Hallo%20Webrise%20Studio%2C%20ich%20interessiere%20mich%20f%C3%BCr%20KI-L%C3%B6sungen%20f%C3%BCr%20meine%20Praxis." target="_blank" class="btn-wa">
-            <svg width="21" height="21" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            Kostenlos per WhatsApp anfragen
-          </a>
-          <a href="tel:+491782353158" class="hero-tel">📞 +49 178 2353158</a>
+    <!-- 1. Hero -->
+    <section class="hero">
+      <div class="container reveal">
+        <div class="text-center">
+          <h1>Ihre Sprechstundenhilfe gehört zu&nbsp;den&nbsp;Patienten –&nbsp;nicht ans&nbsp;Telefon.</h1>
+          <img class="hero-img-m" src="Startseite.jpg" alt="KI-Assistent für Arztpraxen – Webrise Studio" loading="eager">
+          <p>Während Ihr Team behandelt, bucht unser KI-Assistent Termine, beantwortet Anfragen und erinnert Patienten – automatisch, rund um die Uhr.</p>
+          <ul class="hero-blist">
+            <li><span class="chk">✓</span> Anrufe werden automatisch beantwortet – 24/7</li>
+            <li><span class="chk">✓</span> Termine buchen sich selbst – keine Telefonkette mehr</li>
+            <li><span class="chk">✓</span> Weniger No-Shows durch automatische Erinnerungen</li>
+            <li><span class="chk">✓</span> DSGVO-konform – Server ausschließlich in Deutschland</li>
+          </ul>
+          <a href="#anfragen" class="btn btn-primary" style="font-size: 1.05rem; padding: 1rem 2.25rem;">Kostenloses Erstgespräch vereinbaren</a>
+          <p class="hero-trust-m">🛡️ DSGVO-konform · 🗓️ Terminbuchung 24/7 · 🇩🇪 Server Deutschland</p>
         </div>
       </div>
     </section>
 
-    <!-- Pain Points -->
-    <section class="pain-section">
+    <!-- 2. Schmerzpunkte (bg-alt) -->
+    <section class="section bg-alt">
       <div class="container reveal">
-        <h2>Kommt Ihnen das bekannt vor?</h2>
-        <p class="section-sub">Jeden Tag dasselbe – es kostet Zeit, Geld und Nerven.</p>
+        <div class="text-center mb-4">
+          <h2>Kommt Ihnen das bekannt vor?</h2>
+        </div>
         <div class="pain-grid">
           <div class="pain-card">
-            <span class="pain-icon">😤</span>
-            <div>
-              <h3>Telefon klingelt mitten in der Behandlung</h3>
-              <p>Ihr Team ist zerrissen – Patient auf dem Stuhl, Telefon klingelt, niemand kann abnehmen.</p>
-            </div>
+            <div class="pain-number">01</div>
+            <h3>Telefon klingelt mitten in der Behandlung</h3>
+            <p>Ihr Team ist zerrissen – Patient auf dem Stuhl, Telefon klingelt. Wer nicht abnimmt, verliert den Patienten. Der ruft einmal an – dann bei der nächsten Praxis.</p>
           </div>
           <div class="pain-card">
-            <span class="pain-icon">⏰</span>
-            <div>
-              <h3>Keine echte Mittagspause</h3>
-              <p>Klingelnde Telefone, ungelesene Nachrichten – nach Feierabend noch schnell alles abarbeiten.</p>
-            </div>
+            <div class="pain-number">02</div>
+            <h3>No-Shows kosten direkt Umsatz</h3>
+            <p>Patient erscheint nicht – Termin bleibt leer, kein Ersatz mehr möglich. Das passiert täglich und summiert sich auf tausende Euro im Jahr.</p>
           </div>
           <div class="pain-card">
-            <span class="pain-icon">💸</span>
-            <div>
-              <h3>No-Shows kosten direkt Umsatz</h3>
-              <p>Patient erscheint nicht – Termin bleibt leer. Einnahmen weg, kein Ersatzpatient mehr möglich.</p>
-            </div>
+            <div class="pain-number">03</div>
+            <h3>Abends und am Wochenende unerreichbar</h3>
+            <p>Patient will Termin buchen, niemand hebt ab – er ruft die nächste Praxis an und kommt nie wieder zu Ihnen.</p>
           </div>
           <div class="pain-card">
-            <span class="pain-icon">📵</span>
-            <div>
-              <h3>Abends und am Wochenende unerreichbar</h3>
-              <p>Patient will Termin buchen, niemand hebt ab – er ruft die nächste Praxis an und kommt nie wieder.</p>
-            </div>
-          </div>
-          <div class="pain-card">
-            <span class="pain-icon">🏃</span>
-            <div>
-              <h3>Team rennt ständig ans Telefon</h3>
-              <p>Ihre Sprechstundenhilfe macht Telefonkette statt sich um Patienten in der Praxis zu kümmern.</p>
-            </div>
-          </div>
-          <div class="pain-card">
-            <span class="pain-icon">🔄</span>
-            <div>
-              <h3>Wertvolle Kraft für falsche Aufgaben</h3>
-              <p>Qualifizierte Mitarbeitende verbringen Stunden mit Terminkoordination statt Patientenbetreuung.</p>
-            </div>
+            <div class="pain-number">04</div>
+            <h3>Wertvolle Kraft für falsche Aufgaben</h3>
+            <p>Ihre Sprechstundenhilfe verbringt Stunden am Telefon mit Terminkoordination statt sich um die Patienten vor Ort zu kümmern.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Solution -->
-    <section class="solution-section">
-      <div class="container reveal">
-        <h2>So sieht Ihr Alltag mit uns aus</h2>
-        <p class="section-sub">Kein Stress, kein verpasster Patient – Ihr Team gehört zu den Patienten.</p>
-        <div class="solution-list">
-          <div class="solution-item">
-            <span class="sol-check">✓</span>
-            <p>Telefon wird automatisch beantwortet – auch während der Behandlung, in der Mittagspause und am Wochenende</p>
-          </div>
-          <div class="solution-item">
-            <span class="sol-check">✓</span>
-            <p>Termine buchen sich selbst – per WhatsApp, Telefon oder E-Mail, rund um die Uhr ohne Ihr Zutun</p>
-          </div>
-          <div class="solution-item">
-            <span class="sol-check">✓</span>
-            <p>Automatische Terminerinnerungen reduzieren No-Shows – weniger leere Termine, mehr Einnahmen</p>
-          </div>
-          <div class="solution-item">
-            <span class="sol-check">✓</span>
-            <p>Ihr Team konzentriert sich 100% auf Patienten – kein ständiges Unterbrechen mehr</p>
-          </div>
-          <div class="solution-item">
-            <span class="sol-check">✓</span>
-            <p>Mehr Patienten, gleicher Aufwand – niemand geht mehr unbeantwortet weg</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Products -->
+    <!-- 3. Lösungen (weiß) -->
     <section class="section">
       <div class="container reveal">
         <div class="text-center mb-4">
-          <h2>Was wir für Ihre Praxis aufbauen</h2>
-          <p style="color: var(--text-light); max-width: 560px; margin: 0 auto;">Jede Lösung ist auf den Praxisalltag zugeschnitten – kein teures System das niemand nutzt.</p>
+          <h2>So sieht Ihr Alltag mit uns aus</h2>
+          <p>Kein Telefonstress, kein verpasster Patient – Ihr Team gehört zu den Patienten.</p>
         </div>
-        <div class="praxen-product-grid">
+        <ul class="sol-list">
+          <li><span class="tick">✓</span> Telefon wird automatisch beantwortet – auch während der Behandlung, in der Pause und am Wochenende</li>
+          <li><span class="tick">✓</span> Termine buchen sich selbst – per Telefon, WhatsApp oder E-Mail, rund um die Uhr ohne Ihr Zutun</li>
+          <li><span class="tick">✓</span> Automatische Terminerinnerungen reduzieren No-Shows – mehr volle Termine, weniger Umsatzverlust</li>
+          <li><span class="tick">✓</span> Ihr Team konzentriert sich 100% auf die Patienten – kein ständiges Unterbrechen mehr</li>
+          <li><span class="tick">✓</span> Mehr Patienten, gleicher Aufwand – niemand geht mehr unbeantwortet weg</li>
+        </ul>
+      </div>
+    </section>
 
-          <div class="praxen-product-card">
-            <span class="p-icon">📞</span>
+    <!-- 4. Produkte (bg-alt) -->
+    <section class="section bg-alt">
+      <div class="container reveal">
+        <div class="text-center mb-4">
+          <h2>Was wir für Ihre Praxis aufbauen</h2>
+          <p>Jede Lösung ist auf den Praxisalltag zugeschnitten – kein teures System das niemand nutzt.</p>
+        </div>
+        <div class="ki-grid">
+
+          <div class="ki-card">
+            <span class="ki-icon">📞</span>
             <h3>Telefon-Assistent</h3>
-            <p>Nimmt jeden Anruf entgegen – klingt natürlich, bucht Termine und leitet Notfälle sofort an Sie weiter.</p>
-            <ul class="p-features">
+            <p>Nimmt jeden Anruf entgegen – klingt natürlich, bucht Termine und leitet Notfälle sofort weiter. Kein Anruf geht verloren.</p>
+            <ul>
               <li>24/7 erreichbar – auch nachts und am Wochenende</li>
               <li>Termin direkt in Ihren Kalender eingetragen</li>
               <li>Notfälle werden sofort weitergeleitet</li>
               <li>Klingt natürlich – kein Roboter-Feeling</li>
             </ul>
+            <a href="#anfragen" class="btn btn-secondary" style="margin-top: auto;">Anfragen</a>
           </div>
 
-          <div class="praxen-product-card">
-            <span class="p-icon">💬</span>
+          <div class="ki-card">
+            <span class="ki-icon">💬</span>
             <h3>WhatsApp & E-Mail Bot</h3>
-            <p>Patienten schreiben per WhatsApp oder E-Mail – der Bot antwortet sofort und bucht den Termin direkt.</p>
-            <ul class="p-features">
+            <p>Patienten schreiben – der Bot antwortet sofort, qualifiziert und bucht den Termin direkt. Auch nachts und am Wochenende.</p>
+            <ul>
               <li>Antwort in Sekunden – auch nachts</li>
               <li>Terminbuchung direkt im Chat</li>
               <li>Anfragen automatisch bearbeitet</li>
               <li>Ihr Team wird nur bei Ausnahmen eingeschaltet</li>
             </ul>
+            <a href="#anfragen" class="btn btn-secondary" style="margin-top: auto;">Anfragen</a>
           </div>
 
-          <div class="praxen-product-card">
-            <span class="p-icon">🔔</span>
-            <h3>Automatische Terminerinnerung</h3>
-            <p>Einen Tag vor dem Termin bekommt der Patient automatisch eine Erinnerung per SMS oder WhatsApp.</p>
-            <ul class="p-features">
+          <div class="ki-card">
+            <span class="ki-icon">🔔</span>
+            <h3>Terminerinnerung</h3>
+            <p>Einen Tag vor dem Termin bekommt jeder Patient automatisch eine Erinnerung – weniger No-Shows, mehr volle Termine.</p>
+            <ul>
               <li>Weniger No-Shows – mehr volle Termine</li>
               <li>Patient kann einfach absagen oder verschieben</li>
-              <li>Freigewordener Termin wird sofort neu vergeben</li>
+              <li>Freigewordener Termin sofort neu vergeben</li>
               <li>Kein manuelles Anrufen durch Ihr Team</li>
             </ul>
+            <a href="#anfragen" class="btn btn-secondary" style="margin-top: auto;">Anfragen</a>
           </div>
 
         </div>
       </div>
     </section>
 
-    <!-- DSGVO -->
-    <section class="dsgvo-section">
+    <!-- 5. DSGVO (weiß) -->
+    <section class="section">
       <div class="container reveal">
-        <h2>🔒 Patientendaten sind Vertrauenssache</h2>
-        <p class="section-sub">DSGVO ist bei Praxen keine Option – es ist Pflicht. Dafür stehen wir mit vollem Namen.</p>
-        <div class="dsgvo-grid">
-          <div class="dsgvo-item">
-            <span class="dsgvo-icon">🇩🇪</span>
-            <div>
-              <h4>Server ausschließlich in Deutschland</h4>
-              <p>Alle Daten laufen über Hetzner-Server in Deutschland – kein Drittland, kein US-Cloud-Anbieter.</p>
-            </div>
+        <div class="text-center mb-4">
+          <h2>Patientendaten sind Vertrauenssache</h2>
+          <p>DSGVO ist bei Praxen keine Option – es ist Pflicht. Dafür stehen wir.</p>
+        </div>
+        <div class="pain-grid">
+          <div class="pain-card">
+            <span class="dsgvo-icon-tag">🇩🇪</span>
+            <h3>Server in Deutschland</h3>
+            <p>Alle Daten laufen über Hetzner-Server in Deutschland – kein Drittland, kein US-Cloud-Anbieter.</p>
           </div>
-          <div class="dsgvo-item">
-            <span class="dsgvo-icon">🗑️</span>
-            <div>
-              <h4>Keine dauerhaften Patientendaten</h4>
-              <p>Wir speichern keine Patientendaten dauerhaft. Verarbeitete Daten werden nach dem Vorgang gelöscht.</p>
-            </div>
+          <div class="pain-card">
+            <span class="dsgvo-icon-tag">🗑️</span>
+            <h3>Keine dauerhaften Patientendaten</h3>
+            <p>Wir speichern keine Patientendaten dauerhaft. Verarbeitete Daten werden nach dem Vorgang gelöscht.</p>
           </div>
-          <div class="dsgvo-item">
-            <span class="dsgvo-icon">📋</span>
-            <div>
-              <h4>DSGVO-konform nach Art. 28</h4>
-              <p>Vollständiger Auftragsverarbeitungsvertrag (AVV) inklusive – rechtssicher für Ihre Praxis.</p>
-            </div>
+          <div class="pain-card">
+            <span class="dsgvo-icon-tag">📋</span>
+            <h3>AVV nach Art. 28 DSGVO</h3>
+            <p>Vollständiger Auftragsverarbeitungsvertrag inklusive – rechtssicher für Ihre Praxis.</p>
           </div>
-          <div class="dsgvo-item">
-            <span class="dsgvo-icon">🔐</span>
-            <div>
-              <h4>Verschlüsselte Übertragung</h4>
-              <p>Alle Datenübertragungen sind SSL-verschlüsselt. Kein Zugriff durch Dritte möglich.</p>
-            </div>
+          <div class="pain-card">
+            <span class="dsgvo-icon-tag">🔐</span>
+            <h3>SSL-verschlüsselt</h3>
+            <p>Alle Übertragungen sind verschlüsselt. Kein Zugriff durch Dritte möglich.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Trust + Umbau -->
-    <section class="trust-section">
+    <!-- 6. Formular (bg-alt) -->
+    <section class="section bg-alt" id="anfragen">
       <div class="container reveal">
-        <span class="trust-badge">Bewährt im Handwerk · Jetzt für Praxen</span>
-        <h2>Technologie die bereits im Einsatz ist</h2>
-        <p>Wir haben diese Systeme für Handwerksbetriebe entwickelt – Betriebe die jeden Anruf brauchen, keine Zeit für Bürokram haben und rund um die Uhr erreichbar sein müssen. Die gleiche Technologie funktioniert genauso zuverlässig für Arztpraxen.</p>
-        <div class="umbau-box">
-          <strong>Hinweis:</strong> Unsere Hauptwebsite ist gerade im Umbau und wird in Kürze vollständig verfügbar sein. Für alle Informationen und ein kostenloses Erstgespräch erreichen Sie uns direkt – wir melden uns innerhalb von 24 Stunden.
+        <div class="text-center mb-4">
+          <span class="trust-pill">Bewährt im Handwerk · Jetzt für Praxen</span>
+          <h2>Kostenloses Erstgespräch vereinbaren</h2>
+          <p>20 Minuten – kein Druck, keine Verpflichtung.<br>Oder direkt: <a href="tel:+491782353158" style="color: var(--primary); font-weight: 500;">+49 178 2353158</a> · <a href="mailto:info@webrisestudio.de" style="color: var(--primary); font-weight: 500;">info@webrisestudio.de</a></p>
         </div>
-      </div>
-    </section>
 
-    <!-- Final CTA -->
-    <section class="final-cta">
-      <div class="container">
-        <h2>Bereit für eine Praxis ohne Telefonstress?</h2>
-        <p>Kostenloses Erstgespräch – 20 Minuten, kein Druck, keine Verpflichtung.</p>
-        <div class="final-cta-buttons">
-          <a href="https://wa.me/491782353158?text=Hallo%20Webrise%20Studio%2C%20ich%20interessiere%20mich%20f%C3%BCr%20KI-L%C3%B6sungen%20f%C3%BCr%20meine%20Praxis.%20Bitte%20melden%20Sie%20sich%20bei%20mir." target="_blank" class="btn-wa">
-            <svg width="21" height="21" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            Jetzt per WhatsApp anfragen
-          </a>
-          <a href="tel:+491782353158" class="tel-big">📞 +49 178 2353158</a>
+        <div class="form-card">
+          <form id="praxen-form" action="https://formspree.io/f/xvzlalwb" method="POST">
+
+            <div class="form-group">
+              <label for="name" class="form-label">Praxisname / Ihr Name</label>
+              <input type="text" id="name" name="name" class="form-control" required placeholder="z. B. Praxis Dr. Müller oder Dr. Anna Müller">
+            </div>
+
+            <div class="grid" style="gap: 1.5rem; margin-bottom: 0;">
+              <div class="form-group">
+                <label for="email" class="form-label">E-Mail Adresse</label>
+                <input type="email" id="email" name="email" class="form-control" required placeholder="praxis@example.de">
+              </div>
+              <div class="form-group">
+                <label for="phone" class="form-label">Telefonnummer</label>
+                <input type="tel" id="phone" name="phone" class="form-control" required placeholder="0123 456789">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="topic" class="form-label">Womit kann ich Ihnen helfen?</label>
+              <select id="topic" name="topic" class="form-control" required>
+                <option value="" disabled selected>Bitte wählen...</option>
+                <option value="Telefon-Assistent">Telefon-Assistent – Anrufe kommen rein wenn wir behandeln</option>
+                <option value="WhatsApp-Email-Bot">WhatsApp / E-Mail Bot – Nachrichten stapeln sich</option>
+                <option value="Terminerinnerung">Terminerinnerung – Wir haben zu viele No-Shows</option>
+                <option value="Komplett">Alles zusammen – Telefon, Nachrichten und Erinnerungen</option>
+                <option value="Unsicher">Erstmal beraten lassen – ich bin noch nicht sicher</option>
+                <option value="Anderes">Etwas anderes – einfach anfragen</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message" class="form-label">Kurze Beschreibung (optional)</label>
+              <textarea id="message" name="message" class="form-control" placeholder="Was beschäftigt Sie am meisten? Je mehr Sie schreiben, desto besser kann ich mich vorbereiten."></textarea>
+            </div>
+
+            <input type="hidden" name="_source" value="praxen-landing">
+
+            <button type="submit" class="btn btn-primary btn-block" style="font-size: 1.125rem; padding: 1rem;">Anfrage absenden – kostenlos &amp; unverbindlich</button>
+          </form>
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- Footer -->
+  <!-- Footer – identisch mit Hauptseite -->
   <footer>
     <div class="container">
       <div class="footer-content">
         <div class="footer-brand">
           <h3>Webrise <span style="color: var(--primary)">Studio</span></h3>
-          <p>KI-Lösungen für Handwerk und Praxen.</p>
+          <p>Digitale Lösungen für Handwerksbetriebe und Praxen.</p>
         </div>
         <div class="footer-links">
-          <h4>Rechtliches</h4>
+          <h4>Leistungen</h4>
           <ul>
+            <li><a href="ki-loesungen.html">KI-Lösungen</a></li>
+            <li><a href="pakete.html">Websites</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Unternehmen</h4>
+          <ul>
+            <li><a href="ueber-mich.html">Über mich</a></li>
             <li><a href="impressum.html">Impressum</a></li>
             <li><a href="datenschutz.html">Datenschutz</a></li>
           </ul>
@@ -605,11 +385,12 @@
           <ul>
             <li><a href="tel:+491782353158">+49 178 2353158</a></li>
             <li><a href="mailto:info@webrisestudio.de">info@webrisestudio.de</a></li>
+            <li><a href="#anfragen">Jetzt anfragen</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2026 Webrise Studio. Alle Rechte vorbehalten.</p>
+        <p>&copy; 2026 Webrise Studio. Alle Rechte vorbehalten.</p>
       </div>
     </div>
   </footer>
@@ -619,5 +400,32 @@
   </a>
 
   <script src="js/script.js"></script>
+  <script>
+    const form = document.getElementById('praxen-form');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('button[type="submit"]');
+      const orig = btn.innerText;
+      btn.innerText = 'Wird gesendet...';
+      btn.disabled = true;
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          window.location.href = 'https://webrisestudio.de/danke.html';
+        } else {
+          const data = await res.json();
+          throw new Error(data.error || 'Fehler beim Senden');
+        }
+      } catch (err) {
+        alert('Ups! Da ist etwas schiefgelaufen: ' + err.message);
+        btn.innerText = orig;
+        btn.disabled = false;
+      }
+    });
+  </script>
 </body>
 </html>
