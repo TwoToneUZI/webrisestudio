@@ -15,22 +15,67 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png">
   <style>
+    /* ── MINIMAL HEADER ────────────────────────── */
+    .lp-header {
+      background: white;
+      border-bottom: 1px solid var(--border-color);
+      padding: 0.875rem 0;
+    }
+    .lp-header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .lp-tel-link {
+      color: var(--text-light);
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+    .lp-tel-link:hover { color: var(--primary); }
+
     /* ── HERO ──────────────────────────────────── */
     .hero {
       background: linear-gradient(155deg, #0f172a 0%, #003282 55%, #0052cc 100%);
-      padding: 6rem 0 5rem !important;
+      padding: 4rem 0 4rem !important;
       min-height: auto !important;
     }
-    .hero h1 { color: white !important; font-size: clamp(1.75rem, 3vw, 2.5rem) !important; line-height: 1.2 !important; margin-bottom: 1rem !important; }
-    .hero p  { color: rgba(255,255,255,0.85) !important; max-width: 560px; margin: 0 auto 1.5rem !important; }
 
-    /* Bullet list in hero */
+    /* Desktop: two-column flex */
+    .lp-hero-flex {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+    }
+    .lp-hero-text { flex: 1; min-width: 0; }
+    .lp-hero-img-d {
+      flex: 0 0 43%;
+      max-width: 43%;
+    }
+    .lp-hero-img-d img {
+      width: 100%;
+      border-radius: 16px;
+      display: block;
+    }
+
+    /* Hero text */
+    .hero-headline {
+      color: white !important;
+      font-size: clamp(1.6rem, 2.4vw, 2.4rem) !important;
+      line-height: 1.2 !important;
+      margin-bottom: 1rem !important;
+    }
+    .hero-intro {
+      color: rgba(255,255,255,0.85) !important;
+      font-size: 1rem !important;
+      line-height: 1.7 !important;
+      margin-bottom: 1.25rem !important;
+    }
+
+    /* Bullet list */
     .hero-blist {
       list-style: none;
       padding: 0;
-      margin: 0 auto 1.75rem;
-      max-width: 460px;
-      text-align: left;
+      margin: 0 0 1.75rem;
     }
     .hero-blist li {
       display: flex;
@@ -89,21 +134,15 @@
 
     /* ── MOBILE ────────────────────────────────── */
     @media (max-width: 768px) {
-      .hero {
-        padding: 5.5rem 0 4.5rem !important;
-        text-align: left !important;
-      }
-      .hero h1 {
+      .hero { padding: 3rem 0 3.5rem !important; }
+      .lp-hero-flex { flex-direction: column; gap: 0; }
+      .lp-hero-text { width: 100%; }
+      .lp-hero-img-d { display: none; }
+
+      .hero-headline {
         font-size: 2rem !important;
         line-height: 1.25 !important;
         margin-bottom: 1rem !important;
-        text-align: left !important;
-      }
-      .hero .text-center { text-align: left !important; }
-      .hero p {
-        text-align: left !important;
-        font-size: 1rem !important;
-        margin: 0 0 1rem !important;
       }
       .hero-img-m {
         display: block !important;
@@ -132,39 +171,36 @@
 </head>
 <body>
 
-  <!-- Navigation – identisch mit Hauptseite -->
-  <nav class="navbar">
+  <!-- Minimaler Header – kein Nav, nur Branding -->
+  <header class="lp-header">
     <div class="container">
       <a href="index.html" class="logo">Webrise <span>Studio</span></a>
-      <button class="hamburger">
-        <span></span><span></span><span></span>
-      </button>
-      <div class="nav-links">
-        <a href="index.html">Startseite</a>
-        <a href="ki-loesungen.html">KI-Lösungen</a>
-        <a href="ueber-mich.html">Über mich</a>
-        <a href="#anfragen" class="btn btn-primary">Kostenloses Gespräch</a>
-      </div>
+      <a href="tel:+491782353158" class="lp-tel-link">+49 178 2353158</a>
     </div>
-  </nav>
+  </header>
 
   <main>
 
     <!-- 1. Hero -->
     <section class="hero">
       <div class="container reveal">
-        <div class="text-center">
-          <h1>Ihre Sprechstundenhilfe gehört zu&nbsp;den&nbsp;Patienten –&nbsp;nicht ans&nbsp;Telefon.</h1>
-          <img class="hero-img-m" src="Startseite.jpg" alt="KI-Assistent für Arztpraxen – Webrise Studio" loading="eager">
-          <p>Während Ihr Team behandelt, bucht unser KI-Assistent Termine, beantwortet Anfragen und erinnert Patienten – automatisch, rund um die Uhr.</p>
-          <ul class="hero-blist">
-            <li><span class="chk">✓</span> Anrufe werden automatisch beantwortet – 24/7</li>
-            <li><span class="chk">✓</span> Termine buchen sich selbst – keine Telefonkette mehr</li>
-            <li><span class="chk">✓</span> Weniger No-Shows durch automatische Erinnerungen</li>
-            <li><span class="chk">✓</span> DSGVO-konform – Server ausschließlich in Deutschland</li>
-          </ul>
-          <a href="#anfragen" class="btn btn-primary" style="font-size: 1.05rem; padding: 1rem 2.25rem;">Kostenloses Erstgespräch vereinbaren</a>
-          <p class="hero-trust-m">🛡️ DSGVO-konform · 🗓️ Terminbuchung 24/7 · 🇩🇪 Server Deutschland</p>
+        <div class="lp-hero-flex">
+          <div class="lp-hero-text">
+            <h1 class="hero-headline">Ihre Sprechstundenhilfe gehört zu&nbsp;den&nbsp;Patienten – nicht ans&nbsp;Telefon.</h1>
+            <img class="hero-img-m" src="Startseite.jpg" alt="KI-Assistent für Arztpraxen – Webrise Studio" loading="eager">
+            <p class="hero-intro">Während Ihr Team behandelt, bucht unser KI-Assistent Termine, beantwortet Anfragen und erinnert Patienten – automatisch, rund um die Uhr.</p>
+            <ul class="hero-blist">
+              <li><span class="chk">✓</span> Anrufe werden automatisch beantwortet – 24/7</li>
+              <li><span class="chk">✓</span> Termine buchen sich selbst – keine Telefonkette mehr</li>
+              <li><span class="chk">✓</span> Weniger No-Shows durch automatische Erinnerungen</li>
+              <li><span class="chk">✓</span> DSGVO-konform – Server ausschließlich in Deutschland</li>
+            </ul>
+            <a href="#anfragen" class="btn btn-primary" style="font-size: 1.05rem; padding: 1rem 2.25rem;">Kostenloses Erstgespräch vereinbaren</a>
+            <p class="hero-trust-m">🛡️ DSGVO-konform · 🗓️ Terminbuchung 24/7 · 🇩🇪 Server Deutschland</p>
+          </div>
+          <div class="lp-hero-img-d">
+            <img src="Startseite.jpg" alt="KI-Assistent für Arztpraxen – Webrise Studio" loading="eager">
+          </div>
         </div>
       </div>
     </section>
