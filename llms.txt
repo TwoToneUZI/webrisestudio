@@ -1,0 +1,93 @@
+# Webrise Studio
+
+> Webrise Studio richtet für kleine Betriebe in der Region Crailsheim und
+> Schwäbisch Hall (Baden-Württemberg, Deutschland) digitale Helfer ein:
+> einen Telefon-Assistenten, der Anrufe annimmt, einen WhatsApp-Assistenten,
+> der schriftliche Anfragen beantwortet, und Websites, mit denen man
+> gefunden wird. Zwei Ansprechpartner: Ahad Habib (Gründer) und
+> Florian Ludwig (Partner). Einstieg immer über ein kostenloses
+> Erstgespräch von fünfzehn Minuten.
+
+## Seiten
+
+- [Startseite](https://webrisestudio.de/): Überblick über die drei Helfer,
+  Beispieltag eines Handwerksbetriebs, häufige Fragen.
+- [Telefon-Assistent](https://webrisestudio.de/telefon-assistent/): was der
+  Assistent am Telefon übernimmt, zwei Hörproben, häufige Fragen.
+- [WhatsApp-Assistent](https://webrisestudio.de/whatsapp/): Beispiel-Chat
+  eines Heizungsbauers am Samstagabend, eigene WhatsApp-Nummer für den
+  Betrieb.
+- [Websites](https://webrisestudio.de/websites/): Websites für Handwerk,
+  Werkstatt und Praxis, auf dem Handy gebaut, mit optionalem Berater.
+- [Für Handwerk und Werkstatt](https://webrisestudio.de/handwerker/):
+  Telefon-Assistent, WhatsApp-Assistent und Website für Handwerksbetriebe.
+- [Für Arzt- und Zahnarztpraxen](https://webrisestudio.de/praxen/):
+  Telefon-Assistent und Praxis-Website, ohne WhatsApp.
+- [Kontakt](https://webrisestudio.de/kontakt/): Telefon, E-Mail,
+  Terminbuchung über cal.com.
+- [Impressum](https://webrisestudio.de/impressum/)
+- [Datenschutzerklärung](https://webrisestudio.de/datenschutz/)
+
+## Leistungen im Einzelnen
+
+- Telefon-Assistent: nimmt Anrufe an, fragt nach dem Anliegen, notiert Name
+  und Rückrufnummer, bucht auf Wunsch direkt einen Termin in den Google-
+  oder Outlook-Kalender und stellt als dringend festgelegte Fälle zum
+  Betrieb durch. Nach dem Anruf geht eine kurze Zusammenfassung an den
+  Betrieb. Rund um die Uhr erreichbar. Die Kunden rufen weiter dieselbe
+  Nummer an wie bisher. Technisch über einen europäischen Anbieter mit
+  Hauptservern in Nürnberg, Auftragsverarbeitungsvertrag nach DSGVO
+  inklusive.
+- WhatsApp-Assistent: beantwortet Anfragen, die per WhatsApp hereinkommen,
+  fragt nach was zu tun ist, wo und bis wann, notiert Name und
+  Rückrufnummer und bucht auf Wunsch einen Termin in den Kalender. Der
+  Betrieb bekommt eine eigene WhatsApp-Nummer, die private Nummer bleibt
+  privat. Für Handwerksbetriebe und Werkstätten. Für Arztpraxen wird
+  WhatsApp bewusst NICHT angeboten, weil Patientendaten dort nicht
+  hingehören (ärztliche Schweigepflicht).
+- Website: moderne, schnelle Seiten, die auf dem Handy gut aussehen und so
+  gebaut sind, dass Google sie sauber lesen kann. Domain und Inhalte laufen
+  auf den Namen des Kunden. Auf Wunsch mit eingebautem Berater, der Fragen
+  von Besuchern direkt auf der Website beantwortet.
+
+## Häufige Fragen und Antworten
+
+- Was kostet das? Das Erstgespräch kostet nichts. Was der Helfer kostet,
+  wissen Sie vorher. Der Preis richtet sich nach dem Umfang und danach, wie
+  viel telefoniert oder geschrieben wird. Faustregel: ein einziger
+  gewonnener Auftrag deckt die Monatsgebühr.
+- Was kostet eine Website? Das hängt davon ab, wie viele Seiten sie hat und
+  was drauf soll. Der Preis steht vor Beginn fest.
+- Muss ich mich mit Technik auskennen? Nein. Beim Telefon-Assistenten rufen
+  die Kunden weiter dieselbe Nummer an, im Betrieb ändert sich nichts. Beim
+  WhatsApp-Assistenten bekommt der Betrieb eine eigene WhatsApp-Nummer.
+- Was passiert bei einem Notfall? Was der Betrieb vorher als dringend
+  festlegt, stellt der Assistent direkt durch. Diese Weiterleitung ist fest
+  eingebaut und immer aktiv.
+- Was, wenn der Assistent etwas nicht weiß? Er rät nicht. Er notiert die
+  Frage und sagt einen Rückruf zu. Was er sagen darf, legt der Betrieb
+  vorher fest.
+- Klingt das nach Roboter? Im Erstgespräch wird der Assistent gemeinsam
+  angerufen, danach entscheidet der Kunde.
+- Wie lange dauert die Einrichtung? Meist ein bis zwei Wochen.
+- Komme ich damit bei Google nach vorne? Versprechen kann das niemand. Die
+  Seite wird so gebaut, dass Google sie sauber lesen und einordnen kann.
+
+## Für Arzt- und Zahnarztpraxen
+
+- Der Telefon-Assistent nimmt Terminwünsche, Absagen und Rückrufbitten auf
+  und stellt durch, was die Praxis als dringend festgelegt hat.
+- Keine medizinischen Auskünfte, keine Befunde, kein Zugriff auf die
+  Patientenverwaltung.
+- Kein WhatsApp für Praxen (ärztliche Schweigepflicht).
+- Hauptserver in Nürnberg, Auftragsverarbeitungsvertrag nach DSGVO
+  schriftlich.
+
+## Kontakt
+
+- Telefon: 0178 2353158 (Ahad Habib), 0176 70331310 (Florian Ludwig)
+- E-Mail: info@webrisestudio.de
+- Anschrift: Am Welschen Brunnen 5, 74564 Crailsheim, Baden-Württemberg,
+  Deutschland
+- Terminbuchung: cal.com, fünfzehn Minuten, unverbindlich
+- Einzugsgebiet: Crailsheim, Schwäbisch Hall und Umgebung
