@@ -226,9 +226,7 @@ p { text-wrap: pretty; }
 .seitenkopf {
   position: sticky; top: 0; z-index: 100;
   height: var(--kopf-hoehe);
-  background: rgba(252,252,251,.92);
-  backdrop-filter: saturate(180%) blur(12px);
-  -webkit-backdrop-filter: saturate(180%) blur(12px);
+  background: #fbfbfa;
   border-bottom: 1px solid var(--linie);
 }
 .seitenkopf .huelle {
@@ -344,8 +342,7 @@ p { text-wrap: pretty; }
   position: fixed; left: 0; right: 0; bottom: 0; z-index: 98;
   display: grid; grid-template-columns: 1fr 1fr; gap: var(--s2);
   padding: var(--s2) var(--s3) calc(var(--s2) + env(safe-area-inset-bottom));
-  background: rgba(252,252,251,.95);
-  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  background: #fbfbfa;
   border-top: 1px solid var(--linie);
   box-shadow: 0 -4px 20px rgba(14,17,22,.06);
 }
